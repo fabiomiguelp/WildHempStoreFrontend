@@ -13,32 +13,22 @@ const IndexPage = ({ data }) => {
   const collectionPreviews = useCollections(collections, products)
 
   return (
-    <div>
+    <div class="" >
       <SearchEngineOptimization title="Home" />
-      <div className="bg-ui-light pb-12 lg:pb-0 w-full px-4 sm:px-6 lg:px-12">
-        <div className="flex flex-col lg:flex-row items-center max-w-screen-2xl mx-auto">
+      <div className="px-20 w-screen h-screen flex  flex-row bg-center bg-no-repeat bg-[#181D17]  bg-[length:800px] bg-center bg-cannabis">
+        <div className="relative  grid h-screen w-screen place-items-center ">
           <StaticImage
-            src="../images/hero-merch.png"
-            alt="A black Medusa hoodie and a white Medusa coffee mug"
-            placeholder="tracedSVG"
-            className="w-full lg:w-1/2 h-auto"
+            src="../images/WHS_Lettering-Branco.png"
+     
+            className="absolute w-full lg:w-1/2 h-auto shadow-inner"
           />
-          <div>
-            <h1 className="text-4xl">CLAIM YOUR MERCH</h1>
-            <p className="mt-2 text-lg font-normal">
-              Contribute to Medusa and receive free merch
-              <br />
-              as a token of our appreciation
-            </p>
-            <button className="btn-ui mt-4 min-w-full lg:min-w-0">
-              Learn more
-            </button>
-          </div>
+
         </div>
+       
       </div>
       <div className="layout-base my-12 min-h-0">
         <Grid
-          title={"Featured"}
+          title={"Em destaque"}
           cta={{ to: "/products", text: "Browse all products" }}
         >
           {prods.slice(0, 4).map(p => {

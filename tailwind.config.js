@@ -6,6 +6,9 @@ module.exports = {
       fontSize: {
         "2xs": "0.5rem",
       },
+      backgroundImage: {
+        'cannabis': "url('../images/landjpg.jpg')",
+      },
       maxWidth: {
         "1/4": "25%",
         "1/2": "50%",

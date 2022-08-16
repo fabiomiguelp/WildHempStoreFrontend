@@ -41,10 +41,10 @@ const ShoppingBag = () => {
             })}
           </div>
         </div>
-        <div className="relative w-full mb-8 lg:mb-0 lg:w-2/5">
+      </div>
+        <div className="relative w-full mb-8 lg:mb-0 lg:w-2/5 my-10">
           <CartReview cart={cart} />
         </div>
-      </div>
       {related.length > 0 && (
         <div className="my-12">
           <Grid

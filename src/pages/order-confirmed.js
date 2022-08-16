@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import OrderCompletedItem from "../components/orders/order-completed-item"
 import OrderTotal from "../components/orders/order-total"
 import SearchEngineOptimization from "../components/utility/seo"
+import { StaticImage } from "gatsby-plugin-image"
 
 const OrderConfirmed = ({ location }) => {
   const [order, setOrder] = useState(undefined)
@@ -42,12 +43,15 @@ const OrderConfirmed = ({ location }) => {
     <div className="layout-base flex justify-center pb-16">
       <SearchEngineOptimization title="Order Confirmed" />
       <div className="max-w-xl">
-        <span className="text-xs font-medium mb-2">THANK YOU</span>
-        <h1>Order Confirmed</h1>
+        <span className="text-xs font-medium mb-2">OBRIGADO</span>
+        <StaticImage
+            src="../images/WHS_horizontal-verde.png"
+     
+       
+          />
+        <h1>A sua encomenda esta confirmada</h1>
         <p className="text-md font-light mt-3">
-          Your order #{order.display_id} was successfully processed. You will
-          receive an email with the tracking number of your parcel once it’s
-          avaliable.
+          A sua encomenda #{order.display_id} foi processada corretamente. Irá receber um email com o estado e nº de tracking da sua encomenda, assim que seja enviada.
         </p>
         <div className="my-8">
           {order.items.map((item, index) => {

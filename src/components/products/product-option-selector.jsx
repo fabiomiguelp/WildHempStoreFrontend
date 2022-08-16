@@ -6,7 +6,7 @@ const ProductOptionSelector = ({ option, current, updateOption }) => {
   const filteredOptions = option.values.map(v => v.value).filter(onlyUnique)
   return (
     <div className="text-sm">
-      <p className="font-medium mb-2">Select {option.title}</p>
+      <p className="font-medium mb-2">Selecione </p>
       <div>
         {filteredOptions.map((v, index) => {
           return (
@@ -14,8 +14,8 @@ const ProductOptionSelector = ({ option, current, updateOption }) => {
               key={index}
               className={classNames(
                 v === current
-                  ? "bg-ui-dark text-white"
-                  : "bg-ui hover:bg-ui-dark hover:text-white",
+                  ? "bg-ui-dark text-white bg-gray-800"
+                  : "bg-ui hover:bg-ui-dark hover:text-white ",
                 "inline-flex items-center justify-center rounded-sm text-xs h-12 w-12 mr-2 last:mr-0 hover:bg-ui-dark hover:text-white"
               )}
               onClick={() => updateOption({ [option.id]: v })}

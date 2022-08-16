@@ -1,6 +1,6 @@
 import { Link } from "gatsby"
 import React, { useState } from "react"
-import Logo from "../../icons/logo.svg"
+import Logo from "../../images/WHS_Simbolo-Branco.png"
 import AccountPopover from "./account-popover"
 import Banner from "./banner"
 import CartPopover from "./cart-popover"
@@ -86,23 +86,23 @@ const Header = () => {
   const [open, setOpen] = useState(false)
   return (
     <div className="sticky top-0 z-20">
-      <header className="relative bg-white">
+      <header className="relative bg-[#181D17]">
         <Banner />
         <MobileMenu open={open} setOpen={setOpen} />
         <nav
           aria-label="Top"
-          className="px-4 sm:px-6 lg:px-8 border-b border-ui-medium flex items-center justify-between"
+          className="px-4 sm:px-6 lg:px-60 border-b  border-ui-medium flex items-center justify-between"
         >
           <div className="flex items-center">
-            <div className="h-16 flex items-center">
+            <div className="h-20 flex items-center">
               <button
                 type="button"
-                className="bg-white p-2 lg:hidden"
+                className="bg-inherit p-2 lg:hidden"
                 onClick={() => setOpen(true)}
               >
                 <span className="sr-only">Open menu</span>
                 <svg
-                  className="w-4 h-4 black"
+                  className="w-4 h-4 white fill-white"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -112,15 +112,15 @@ const Header = () => {
 
               <div className="ml-4 flex lg:ml-0 lg:mr-8">
                 <Link to="/">
-                  <img className="h-8 w-auto" src={Logo} alt="" />
+                  <img className="h-12 w-auto scale-500" src={Logo} alt="" />
                 </Link>
               </div>
             </div>
 
-            <div className="hidden lg:flex lg:items-center">
-              <div className="hidden flex-grow items-center justify-center lg:flex text-sm font-medium">
-                <HeaderLink to="/products" text="Products" />
-                <HeaderLink to="/collections" text="Collections" />
+            <div className="hidden lg:flex lg:items-center ">
+              <div className="hidden flex-grow items-center justify-center lg:flex text-2xl font-medium">
+                <HeaderLink to="/products" text="Products" className="text-white"/>
+                <HeaderLink to="/collections" text="Collections" className="text-white"/>
               </div>
             </div>
           </div>
