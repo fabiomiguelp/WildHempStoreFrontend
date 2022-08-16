@@ -79,20 +79,25 @@ const Product = ({ data, pageContext }) => {
               </div>
             )
           })}
-          <div className="inline-flex mt-4">
-            <button
-              className="btn-ui mr-2 px-12"
-              onClick={() => handleAddToCart()}
-              disabled={loading}
-            >
-              Add to bag
-            </button>
-            <QuantitySelector
-              quantity={quantity}
-              increment={increaseQuantity}
-              decrement={decreaseQuantity}
-            />
+          <div className="py-4 flex-inline">
+            <div className="float-left pr-10 w-4/5">
+              <button
+                className="btn-ui"
+                onClick={() => handleAddToCart()}
+                disabled={loading}
+              >
+                Adicionar
+              </button>
+              </div>
+              <div className="float-right w-1/5">
+              <QuantitySelector
+                quantity={quantity}
+                increment={increaseQuantity}
+                decrement={decreaseQuantity}
+              />
+            </div>
           </div>
+          
           <div className="mt-12">
             {Object.keys(details).length > 0 && (
               <ProductExpandable title="Details">
@@ -117,8 +122,8 @@ const Product = ({ data, pageContext }) => {
       </div>
       <div className="my-12">
         <Grid
-          title="You might also like"
-          cta={{ to: "/products", text: "Browse all products" }}
+          title="Produtos relacionados"
+          cta={{ to: "/products", text: "Ver todos os produtos" }}
         >
           {related.edges
             .map(({ node }) => node)

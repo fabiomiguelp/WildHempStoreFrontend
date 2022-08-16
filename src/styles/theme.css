@@ -26,7 +26,7 @@ p {
 
 @layer components {
   .btn-ui {
-    @apply py-2 px-4 bg-gray-800 text-white text-xl w-full font-medium shadow focus:outline-none focus:ring-2 focus:ring-ui-dark focus:ring-opacity-75 disabled:bg-ui-medium;
+    @apply  bg-gray-800 text-white text-xl w-full px-4 py-2 font-medium shadow focus:outline-none focus:ring-2 focus:ring-ui-dark focus:ring-opacity-75 disabled:bg-ui-medium;
   }
 }
 

@@ -109,7 +109,7 @@ const CheckoutFlow = () => {
               isCompleted={step.completed}
             >
               {step.children}
-              <div className="flex items-center justify-between">
+              <div className="flex-inline">
                 {step.key !== 0 && (
                   <button
                     className="text-gray-700 flex items-center"
@@ -121,7 +121,7 @@ const CheckoutFlow = () => {
                       aria-hidden="true"
                       className="w-3 h-3 mr-2"
                     />
-                    <span>Go back</span>
+                    <span>Voltar</span>
                   </button>
                 )}
                 <div />
@@ -132,7 +132,7 @@ const CheckoutFlow = () => {
                     onClick={step.handleSubmit}
                     disabled={step.controller.isSubmitting}
                   >
-                    Next
+                    Seguinte
                   </button>
                 )}
               </div>

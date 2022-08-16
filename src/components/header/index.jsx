@@ -119,8 +119,8 @@ const Header = () => {
 
             <div className="hidden lg:flex lg:items-center ">
               <div className="hidden flex-grow items-center justify-center lg:flex text-2xl font-medium">
-                <HeaderLink to="/products" text="Products" className="text-white"/>
-                <HeaderLink to="/collections" text="Collections" className="text-white"/>
+                <HeaderLink to="/products" text="Products" />
+                <HeaderLink to="/collections" text="Collections" />
               </div>
             </div>
           </div>

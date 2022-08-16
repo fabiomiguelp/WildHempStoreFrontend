@@ -29,7 +29,7 @@ const IndexPage = ({ data }) => {
       <div className="layout-base my-12 min-h-0">
         <Grid
           title={"Em destaque"}
-          cta={{ to: "/products", text: "Browse all products" }}
+          cta={{ to: "/products", text: "Ver todos os produtos" }}
         >
           {prods.slice(0, 4).map(p => {
             return <ProductListItem product={p} key={p.handle} />
@@ -37,8 +37,8 @@ const IndexPage = ({ data }) => {
         </Grid>
         <div className="mt-12">
           <Grid
-            title="Shop by collection"
-            cta={{ to: "/collections", text: "Browse all collections" }}
+            title="Ver por categorias"
+            cta={{ to: "/collections", text: "Ver todas as categorias" }}
           >
             {collectionPreviews.slice(0, 4).map(collection => {
               return (

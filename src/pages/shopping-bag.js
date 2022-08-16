@@ -25,9 +25,9 @@ const ShoppingBag = () => {
     <div className="layout-base">
       <SearchEngineOptimization title="Shopping Bag" />
       <div className="flex relative flex-col-reverse lg:flex-row">
-        <div className="flex flex-col lg:mr-12 lg:w-3/5">
+        <div className="flex flex-col lg:mr-12 ">
           <div className="mb-8">
-            <h1 className="font-semibold">Shopping Bag</h1>
+            <h1 className="font-semibold">Carrinho </h1>
           </div>
           <div className="w-full">
             {cart.items.map(item => {
@@ -42,14 +42,14 @@ const ShoppingBag = () => {
           </div>
         </div>
       </div>
-        <div className="relative w-full mb-8 lg:mb-0 lg:w-2/5 my-10">
+        <div className="relative w-full mb-8 lg:mb-0 my-10">
           <CartReview cart={cart} />
         </div>
       {related.length > 0 && (
         <div className="my-12">
           <Grid
-            title="You might also like"
-            cta={{ to: "/products", text: "Browse all products" }}
+            title="Produtos relacionados"
+            cta={{ to: "/products", text: "Ver todos os produtos" }}
           >
             {related.slice(0, 4).map(product => {
               return <ProductListItem key={product.handle} product={product} />

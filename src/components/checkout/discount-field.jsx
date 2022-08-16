@@ -51,7 +51,7 @@ const DiscountField = () => {
 
   return (
     <div>
-      <p className="font-semibold text-sm mb-2">Discount code</p>
+      <p className="font-semibold text-sm mb-2">Codigo de desconto</p>
       <div className="flex items-start">
         {!code ? (
           <Fragment>
@@ -62,7 +62,7 @@ const DiscountField = () => {
             />
             <div className="mx-2" />
             <button className="btn-ui" onClick={handleSubmit} type="submit">
-              Apply
+              Aplicar
             </button>
           </Fragment>
         ) : (
@@ -80,7 +80,7 @@ const DiscountField = () => {
               onClick={async () => await removeDiscount()}
               type="button"
             >
-              Remove
+              Remover
             </button>
           </Fragment>
         )}
